@@ -1,5 +1,7 @@
 clone this project from : https://github.com/NagarjunPrem/sharefx.git
 
+Architecture Diagram : https://raw.githubusercontent.com/NagarjunPrem/sharefx/main/architecture%20and%20essentials/architecture.jpg
+
 To start the project-
 
 Use Maven:
