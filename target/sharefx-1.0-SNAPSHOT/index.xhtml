@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:p="http://primefaces.org/ui"
+                template="/template/_template.xhtml">
+    <h:head>
+        <title>Home Page</title>
+    </h:head>
+    <style>
+body {
+  background-image: url('C:\Users\Nagarjun Prem\Desktop\background.jpg');
+}
+</style>
+    <h:body>
+        <center>
+            <img src="C:\Users\Nagarjun Prem\Desktop\stfx logo 750x422_0_12.png" alt="Stfx"/>
+            <h1>ShareFx</h1>           
+
+        <h:form>
+            <h:outputText value ="User name: " />
+            <p:inputText value="#{login.username}" placeholder="Enter your Stfx ID" size="30" /><br></br>
+            
+            <h:outputText value ="Password: " />
+            <p:password id="pwd" value="#{login.password}" placeholder="Enter your Stfx Pin" size="30"/><br></br>
+            <br></br>
+            <h:commandButton value="Login" action="#{login.validate()}" />
+            
+        </h:form>
+        </center>
+    </h:body>
+</html>
+

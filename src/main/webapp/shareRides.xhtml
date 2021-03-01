@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
+    <head>
+        <title>Rides</title>
+    </head>
+    <h:head>
+        <center>
+        <img src="C:\Users\Nagarjun Prem\Desktop\ride.jpg" alt="Stfx"/>   
+        <h:body>
+            <h:form>
+                <h:dataTable var="r" value="#{controllerBean.rides}">
+                    <h:column>
+                        <f:facet name="header">Name</f:facet>   
+                        <h:outputText value="#{r.name}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Ride Info</f:facet>  
+                        <h:outputText value="#{r.rideinfo}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Count</f:facet>  
+                        <h:outputText value="#{r.count}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Action</f:facet>  
+                        <h:commandButton value="Select" action="#{controllerBean.select(r)}"></h:commandButton>
+                    </h:column>
+                </h:dataTable>
+                
+                <hr/>                
+                <table>
+                    <tr>
+                        <td>Name :</td> 
+                        <td><h:inputText value="#{controllerBean.selectedRides.name}"/></td>
+                    </tr>
+                     <tr>
+                        <td>Ride Info :</td> 
+                        <td><h:inputText value="#{controllerBean.selectedRides.rideinfo}"/></td>
+                    </tr>
+                     <tr>
+                        <td>Count :</td> 
+                        <td><h:inputText value="#{controllerBean.selectedRides.count}"/></td>
+                    </tr>
+                    <tr>
+                        <td><h:commandButton value="Update" action="#{controllerBean.update()}"/></td>
+                        <td><h:commandButton value="Delete" action="#{controllerBean.delete()}"/></td>
+                        </tr>
+                </table>
+            </h:form>
+        </h:body>
+        <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script>
+
+<div class="card">
+    <p:gmap center="45.61784073780403, -61.99538873741925" zoom="15" type="HYBRID" style="width:100%;height:400px"/>
+</div>
+            </center>
+    </h:head>
+</html>
